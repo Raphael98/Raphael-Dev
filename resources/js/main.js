@@ -1,3 +1,4 @@
+
 function openMenu(){
   var sidebar = document.getElementById("sidebar"),
   margin = window.getComputedStyle(sidebar, null).marginLeft;
@@ -8,3 +9,16 @@ function openMenu(){
     sidebar.style.marginLeft = "-60vw";
   }
 }
+
+$(document).ready(function(){
+  $("#sidebar a, #itens a").click(function(event){
+    event.preventDefault();
+    var target = $(this.hash);
+    $("body, html").animate({
+      "scrollTop": target.offset().top
+    });
+  });
+  $("#collapse, #sidebar a").click(function(){
+    openMenu();
+  });
+});

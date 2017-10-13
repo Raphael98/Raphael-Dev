@@ -81,7 +81,7 @@ body, html{
 #banner{
   width:100vw;
   height:60vh;
-  background: url(../img/dev.jpg) fixed center;
+  background: url(../img/dev2.jpg) fixed center;
   background-size: cover;
   position: relative;
   #title{
@@ -115,6 +115,9 @@ body, html{
   .sections();
   background-color: @theme;
   color:white;
+  a{
+    color: rgb(126, 216, 252);
+  }
 }
 
 #contato{
@@ -124,6 +127,14 @@ body, html{
   td{
     padding:2%;
   }
+}
+
+footer{
+  width:100%;
+  background-color: rgb(59, 59, 59);
+  min-height: 50px;
+  text-align: center;
+  color:white;
 }
 
 @media screen and (max-width:550px){
@@ -138,6 +149,6 @@ body, html{
 
 @media (min-width:550px){
   #sidebar{
-    display:none;
+    //display:none;
   }
 }

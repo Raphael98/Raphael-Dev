@@ -2,40 +2,41 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Portfolio</title>
+  <title>Raphael - Dev</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <link rel="icon" href="resources/img/icon.png">
+  <link rel="icon" href="resources/img/code.png">
   <link rel="stylesheet" href="resources/css/style.css">
+  <!-- jQuery -->
+  <script src="resources/js/jqueryGoogle.js"></script>
+  <script src="resources/js/main.js"></script>
   <!-- Semantic ui -->
   <link rel="stylesheet" href="resources/css/semantic.min.css">
-  <script src="resources/js/semantic.js"></script>
+  <script src="resources/js/semantic.min.js"></script>
   <!-- Dev icons -->
   <link rel="stylesheet" href="resources/css/devicon.min.css">
   <link rel="stylesheet" href="resources/css/devicon-colors.css">
-
-  <script src="resources/js/jqueryGoogle.js"></script>
-  <script src="resources/js/main.js"></script>
 </head>
+
 <body>
   <div id="sidebar">
     <a onclick="openMenu()" style="font-size:2rem"> &#10060</a>
-    <a href="#"> Resumo</a>
-    <a href="#"> Skills</a>
-    <a href="#"> Item 3</a>
-    <a href="#"> Item 4</a>
+    <a href="#resumo"> Resumo</a>
+    <a href="#skills"> Skills</a>
+    <a href="#contato"> Contato</a>
+    <a href="#projetos"> Projetos</a>
   </div>
   <nav id="menu">
     <span id="logo">< /Raphael></span>
     <button id="collapse" onclick="openMenu()">&#9776</button>
     <div id="itens">
-      <a href="#"> Resumo</a>
-      <a href="#"> Skills</a>
-      <a href="#"> Item 3</a>
-      <a href="#"> Item 4</a>
+      <a href="#resumo"> Resumo</a>
+      <a href="#skills"> Skills</a>
+      <a href="#contato"> Contato</a>
+      <a href="#projetos"> Projetos</a>
     </div>
   </nav>
-
   <section id="banner">
+    <span id="resumo"></span>
     <div id="title">Um texto bem chamativo</div>
   </section>
 
@@ -43,6 +44,7 @@
     <div class="sixteen wide column">
       <h1>Resumo</h1>
       <p style="padding: 0 5%">
+        <span id="skills"></span>
         Quamquam a noster, fugiat se ab nisi incididunt, quibusdam de duis ne iis legam
         in enim et elit do cupidatat do minim ab cernantur aliqua minim ea dolor eu ea
         dolor aute qui vidisse aut id et quem occaecat. Minim appellat ex praetermissum
@@ -57,14 +59,17 @@
     <div class="sixteen wide column">
       <h1>Skills</h1>
     </div>    
-      <div class="eight wide mobile column four wide computer column"><i class="devicon-html5-plain"></i><br>HTML 5</div>
-      <div class="eight wide mobile column four wide computer column"><i class="devicon-css3-plain"></i><br>CSS 3</div>
-      <div class="eight wide mobile column four wide computer column"><i class="devicon-bootstrap-plain"></i><br>Bootstrap</div>
-      <div class="eight wide mobile column four wide computer column"><i class="devicon-git-plain"></i><br>Git</div>
-      <div class="eight wide mobile column four wide computer column"><i class="devicon-javascript-plain"></i><br>Javascript</div>
-      <div class="eight wide mobile column four wide computer column"><i class="devicon-php-plain"></i><br>PHP</div>
-      <div class="eight wide mobile column four wide computer column"><i class="devicon-mysql-plain"></i><br>MySQL/SQL</div>
-      <div class="eight wide mobile column four wide computer column"><i class="devicon-jquery-plain"></i><br>jQuery</div>
+      <div class="eight wide mobile column four wide tablet column two wide computer column"><i class="devicon-html5-plain"></i><br>HTML 5</div>
+      <div class="eight wide mobile column four wide tablet column two wide computer column"><i class="devicon-css3-plain"></i><br>CSS 3</div>
+      <div class="eight wide mobile column four wide tablet column two wide computer column"><i class="devicon-bootstrap-plain"></i><br>Bootstrap</div>
+      <div class="eight wide mobile column four wide tablet column two wide computer column"><i class="devicon-git-plain"></i><br>Git</div>
+      <div class="eight wide mobile column four wide tablet column two wide computer column"><i class="devicon-javascript-plain"></i><br>Javascript</div>
+      <div class="eight wide mobile column four wide tablet column two wide computer column"><i class="devicon-php-plain"></i><br>PHP</div>
+      <div class="eight wide mobile column four wide tablet column two wide computer column"><i class="devicon-mysql-plain"></i><br>MySQL/SQL</div>
+      <div class="eight wide mobile column four wide tablet column two wide computer column"><i class="devicon-linux-plain"></i><br>Ubuntu</div>
+      <div class="eight wide mobile column four wide tablet column five wide computer column"><i class="devicon-jquery-plain"></i><br>jQuery</div>
+      <div class="eight wide mobile column four wide tablet column five wide computer column"><i class="devicon-less-plain-wordmark"></i><br>Less</div>
+      <div class="eight wide mobile column four wide tablet column five wide computer column"><i class="devicon-photoshop-plain"></i><br>Photoshop</div>
   </section>
 
   <section class="ui grid section-light">
@@ -76,8 +81,9 @@
           <td>raphael.andrade98@outlook.com </td>
         </tr>
         <tr>
+          <span id="projetos"></span>
           <td>Linkedin: </td>
-          <td><a href="https://www.linkedin.com/in/raphael-alves-dev">Perfil</a></a></td>
+          <td><a href="https://www.linkedin.com/in/raphael-alves-dev" target="_blank">Perfil</a></td>
         </tr>
       </table>
     </div>
@@ -86,16 +92,22 @@
   <section class="ui grid section-dark">
     <div class="sixteen wide column">
       <h1>Projetos</h1>
-      <h2>Mas é claro que um Dev. Back-End não vive só de design.</h2>
-      <h3>Confira um dos meus projetos</h3>
+      <h4>Mas é claro que um Desenvolvedor não vive só de design. Confira um dos meus projetos</h4>
+    </div>
+    <div class="sixteen wide column">
+      <div style="width:250px;height:20vh;background-color:white;border-radius:5px;cursor:pointer;margin: 0 auto"></div>
+    </div>
+    <div class="sixteen wide column">
+      <b>Ah, caso você queira dar uma olhadinha no código de cada projeto, visite o meu <a href="https://github.com/Raphael98">Github</a></b>
     </div>
   </section>
 
-  <script>
-    for(i = 0; i < 20; i++){
-      document.write("<h1>Preenchendo espaço</h1>");
-    }
-  </script>
+  <footer class="ui grid">
+    <div class="sixteen wide column">
+      Raphael A. Alves &copy 2017<br>
+      Powered by <a href="https://semantic-ui.com/"> Semantic UI</a><br>
+    </div>
+  </footer>
 
 </body>
 </html>
