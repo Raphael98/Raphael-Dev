@@ -15,7 +15,7 @@ $(document).ready(function(){
     event.preventDefault();
     var target = $(this.hash);
     $("body, html").animate({
-      "scrollTop": target.offset().top
+      "scrollTop": target.offset().top - 70
     });
   });
   $("#collapse, #sidebar a").click(function(){
