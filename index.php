@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+  <?php
+  try{
+		$pdo = new PDO('mysql:host=localhost;dbname=study', 'root', 'tsuki.1');
+		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+		$ip = $_SERVER['REMOTE_ADDR'];
+		$date = date('Y-m-d');
+		$stmt = $pdo->query("SELECT * FROM visits WHERE ip = '{$ip}' AND date = now()");
+		$rs = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		if(count($rs) != 0){
+			$stmt = $pdo->prepare('INSERT INTO visits (ip, date) VALUE (:ip, now());');
+			$stmt->bindValue(':ip', $ip);
+			$stmt->execute();
+		}
+  }catch(PDOException $ex){
+    echo $ex->getMessage();
+  }
+  ?>
   <meta charset="utf-8">
   <title>Raphael - Dev</title>
   <meta name="description" content="Raphael Andrade Alves, desenvolvedor Web PHP">
@@ -118,7 +135,7 @@
 
   <footer class="ui grid" style="margin-left:0">
     <div class="sixteen wide column">
-      Raphael A. Alves &copy 2017<br>
+      Raphael A. Alves &copy; 2017<br>
       Powered by <a href="https://semantic-ui.com/"> Semantic UI</a><br>
     </div>
   </footer>
